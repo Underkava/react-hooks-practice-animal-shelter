@@ -8,6 +8,7 @@
     "react-dom": "^18.2.0",
     "react-scripts": "5.0.1",
     "semantic-ui-css": "^2.5.0",
+    "serve": "^14.2.3",
     "whatwg-fetch": "^3.6.2"
   },
   "scripts": {

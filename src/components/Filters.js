@@ -1,6 +1,14 @@
-import React from "react";
+import React, { useState } from "react";
 
 function Filters() {
+  const[type, setType] = useState("all");
+  const handleTypeChange = (event) => {
+    setType(event.target.value);
+  };
+  
+  const handleFindPetsClick = () => {
+    console.log(`Finding pets of type ${type}`);
+  };
   return (
     <div className="ui form">
       <h3>Animal type</h3>

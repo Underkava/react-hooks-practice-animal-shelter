@@ -6,7 +6,14 @@ import PetBrowser from "./PetBrowser";
 function App() {
   const [pets, setPets] = useState([]);
   const [filters, setFilters] = useState({ type: "all" });
+  useEffect(() => {
+    // fetch pets data from API or database
+    fetchPets().then((data) => setPets(data));
+  }, []);
 
+  const handleFilterChange = (newFilters) => {
+    setFilters(newFilters);
+  };
   return (
     <div className="ui container">
       <header>
